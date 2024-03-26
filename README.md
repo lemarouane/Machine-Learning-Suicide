@@ -1,11 +1,4 @@
-# Suicidal Text Analysis
 
-## Table of Contents
-
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Contributors](#Contributors)
 
 ## About <a name = "about"></a>
 
@@ -19,9 +12,8 @@ advance when a depressed patient attempts to harm himself.
 
 Clone this dataset to get started.
 
+you will find the dataset here
 https://www.kaggle.com/datasets/nikhileswarkomati/suicide-watch
-
-and put it in a folder called `Data`
 
 ### Prerequisites
 
@@ -33,12 +25,6 @@ https://share.streamlit.io/faiqali1/suicidal-text-analysis/main/stream.py
 
 Deployment on https://share.streamlit.io/
 
-## Contributors <a name = "Contributors"></a>
 
-- [Faiq Ali](https://github.com/faiqali1/)
-- [Linzan](https://github.com/LinzanLiu)
-- [Samer](https://github.com/SamerAbukhader)
-- [Makram](https://github.com/makram7x)
-- [Divka](https://github.com/Relviel)
 
 
