@@ -20,7 +20,7 @@ https://www.kaggle.com/datasets/nikhileswarkomati/suicide-watch
 Python or Anaconda
 
 ## Deployment <a name = "deployment"></a>
-https://lemarouanemachinelearning.streamlit.app/
+
 Deployment on https://share.streamlit.io/
 
 
