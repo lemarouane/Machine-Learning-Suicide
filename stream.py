@@ -1,49 +1,31 @@
 import joblib
 import streamlit as st
 
-# Set page configuration
-st.set_page_config(
-    page_title="Suicide Analysis",
-    page_icon=":chart_with_upwards_trend:",
-    layout="wide"
-)
-
-# Load the pre-trained model
 file_name = "finalized_model.sav"
 loaded_model = joblib.load(file_name)
 
-# Title and header
 st.title("Suicide Analysis")
-st.header("Detect Suicidal Text")
+# st.header("Suicide Analysis")
 
-# Description
-st.markdown("Enter text below to analyze whether it contains suicidal content or not.")
+st.markdown("Enter text below to see whether the text you have entered is suicidal or not.")
 
-# Text input
-text_input = st.text_area("Enter your text here:", height=150)
+# removing the streamlit banner at the bottom
+hide_streamlit_style = """
+            <style>
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# Prediction button
-if st.button("Analyze"):
-    # Perform prediction
-    result = loaded_model.predict([text_input])[0]
-    
-    # Display result
-    if result == 1:
-        st.error("The text contains suicidal content.")
-    else:
-        st.success("The text does not contain suicidal content.")
+st.text_input("Text", key="user_text")
 
-# Footer
-st.markdown(
-    """
-    <style>
-        .stApp footer {
-            visibility: hidden;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# You can access the value at any point with:
+text = st.session_state.user_text
+print(text)
 
+result = loaded_model.predict([text])
 
+st.write(result[0])
 
+# Run `python -m streamlit run stream.py`
+# to run the file
